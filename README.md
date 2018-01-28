@@ -1,6 +1,6 @@
 # HAProxy Ansible role
 
-A simple and idempotent HAProxy role.
+A simple and idempotent HAProxy role for Debian.
 The first role release will be made soon.
 
 ## Installation
