@@ -27,3 +27,5 @@ This allows you to split your HAProxy configuration in multiple Ansible template
 Of course, everything is idempotent ;)
 
 The best thing to do is to define your HAProxy templates next to your playbooks, and to override the `haproxy_templates`variable to use them. Like that, you don't have to change the HAProxy role when you update your HAPrxoxy configuration.
+
+More info about configuration at http://localhost:3000/posts/2018-01-26-ansible-templating/.
