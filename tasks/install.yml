@@ -1,0 +1,6 @@
+---
+- name: install haproxy package
+  become: true
+  apt:
+    name: "{{ haproxy_package }}"
+    state: present
