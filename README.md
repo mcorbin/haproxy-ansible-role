@@ -21,7 +21,7 @@ Important variables are (see `defaults.yml` for the default values):
 
 By default, this role deploy the default HAProxy configuration.
 
-`haproxy_configuration_templates`: A list of map, each map having a `src` and `dest` key.
+- `haproxy_configuration_templates`: A list of map, each map having a `src` and `dest` key.
 
 This role will create directory at `/etc/haproxy/haproxy.d`, and template the templates referenced in `haproxy_templates`. Then, it will assemble all the files present in `/etc/haproxy/haproxy.d` (in alphabetical order) into `/etc/haproxy/haproxy.cfg`,
 
@@ -33,4 +33,4 @@ The best thing to do is to define your HAProxy templates next to your playbooks,
 
 More info about configuration at https://mcorbin.fr/posts/2018-01-26-ansible-templating/.
 
-You can also use the `haproxy_extra_templates` variable to template other configuration files: A list of map, each map having a `src`, `dest`, `owner`, `group`, `mode` key.
+- `haproxy_extra_templates`: You can use it to template other configuration files: A list of map, each map having a `src`, `dest`, `owner`, `group`, `mode` key.
