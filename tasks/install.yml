@@ -4,3 +4,4 @@
   apt:
     name: "{{ haproxy_package }}"
     state: present
+    default_release: "{{ haproxy_debian_distribution }}-backports"

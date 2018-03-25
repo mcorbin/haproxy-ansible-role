@@ -1,7 +1,7 @@
 ---
 haproxy_version: 1.8
 
-haproxy_debian_distribution: "stretch"
+haproxy_debian_distribution: "{{ ansible_distribution_release }}"
 
 # used by apt
 haproxy_package: "haproxy={{ haproxy_version }}.*"
@@ -14,7 +14,7 @@ haproxy_debian_backports: "deb http://httpredir.debian.org/debian {{ haproxy_deb
 # set this variable to false if you don't want to enable haproxy backports
 haproxy_haproxy_backports_enabled: true
 
-haproxy_haproxy_backports: "http://haproxy.debian.net {{ haproxy_debian_distribution }}-backports-{{ haproxy_version }} main"
+haproxy_haproxy_backports: "deb http://haproxy.debian.net {{ haproxy_debian_distribution }}-backports-{{ haproxy_version }} main"
 
 haproxy_apt_key_url: https://haproxy.debian.net/bernat.debian.org.gpg
 
