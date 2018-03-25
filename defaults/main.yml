@@ -1,6 +1,9 @@
 ---
 haproxy_version: 1.8
 
+# apt -f
+haproxy_force_install: false
+
 haproxy_debian_distribution: "{{ ansible_distribution_release }}"
 
 # used by apt
