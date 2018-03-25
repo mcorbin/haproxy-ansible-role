@@ -9,10 +9,14 @@ This role can install the latest haproxy releases from https://haproxy.debian.ne
 
 Important variables are (see `defaults.yml` for the default values):
 
-`haproxy_version`: The HAProxy version
-`haproxy_debian_distribution`: The Debian distribution
-`haproxy_debian_backports_enabled`: Enable Debian backports
-`haproxy_haproxy_backports_enabled`: Enable haproxy.debian.net backports
+- `haproxy_version`: The HAProxy version
+- `haproxy_force_install`: Force HAProxy install (apt -f)
+- `haproxy_debian_distribution`: The Debian distribution
+- `haproxy_package`: This variable is used by apt to install HAProxy (default `haproxy={{ haproxy_version }}.*`)
+- `haproxy_debian_backports_enabled`: Enable Debian backports
+- `haproxy_debian_backports`: The Debian backports URL
+- `haproxy_haproxy_backports`: The HAProxy backport URL
+- `haproxy_haproxy_backports_enabled`: Enable haproxy.debian.net backports
 
 ## Configuration
 
