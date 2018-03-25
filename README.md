@@ -31,6 +31,6 @@ Of course, everything is idempotent ;)
 
 The best thing to do is to define your HAProxy templates next to your playbooks, and to override the `haproxy_configuration_templates`variable to use them. Like that, you don't have to change the HAProxy role when you update your HAPrxoxy configuration.
 
-More info about configuration at http://localhost:3000/posts/2018-01-26-ansible-templating/.
+More info about configuration at https://mcorbin.fr/posts/2018-01-26-ansible-templating/.
 
 You can also use the `haproxy_extra_templates` variable to template other configuration files: A list of map, each map having a `src`, `dest`, `owner`, `group`, `mode` key.
