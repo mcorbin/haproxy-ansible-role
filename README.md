@@ -1,7 +1,6 @@
 # HAProxy Ansible role
 
-A simple and idempotent HAProxy role for Debian 8 and 9.
-The first role release will be made soon.
+A simple and idempotent HAProxy role for Debian 8 and 9. You can use it to install the latest HAProxy release.
 
 ## Installation
 
