@@ -24,7 +24,7 @@
     owner: root
     group: root
     mode: 0644
-  with_items: "{{ haproxy_templates }}"
+  with_items: "{{ haproxy_configuration_templates }}"
   changed_when: false
 
 - name: assemble haproxy.d configuration
@@ -36,3 +36,14 @@
     group: root
     mode: 0644
   notify: haproxy | reload
+
+- name: template haproxy extra configuration
+  become: true
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+    mode: "{{ item.mode }}"
+  with_items: "{{ haproxy_extra_templates }}"
+  changed_when: false

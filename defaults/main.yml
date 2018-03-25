@@ -21,6 +21,8 @@ haproxy_haproxy_backports: "deb http://haproxy.debian.net {{ haproxy_debian_dist
 
 haproxy_apt_key_url: https://haproxy.debian.net/bernat.debian.org.gpg
 
-haproxy_templates:
+haproxy_configuration_templates:
   - src: haproxy.config.j2
     dest: 01_haproxy_config
+
+haproxy_extra_templates: []
