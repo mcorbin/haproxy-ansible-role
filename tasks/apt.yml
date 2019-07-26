@@ -5,14 +5,14 @@
     url: "{{ haproxy_apt_key_url }}"
     state: present
   notify: apt | update cache
-  when: haproxy_haproxy_backports_enabled
+  when: haproxy_backports_enabled
 
 - name: Enable haproxy backports repository
   become: true
   apt_repository:
-    repo: "{{ haproxy_haproxy_backports }}"
+    repo: "{{ haproxy_backports }}"
     state: present
-  when: haproxy_haproxy_backports_enabled
+  when: haproxy_backports_enabled
   notify: apt | update cache
 
 - name: Enable debian backports repository

@@ -1,5 +1,5 @@
 ---
-haproxy_version: 1.8
+haproxy_version: 2.0
 
 # apt -f
 haproxy_force_install: false
@@ -12,12 +12,12 @@ haproxy_package: "haproxy={{ haproxy_version }}.*"
 # set this variable to false if you don't want to enable Debian backports
 haproxy_debian_backports_enabled: true
 
-haproxy_debian_backports: "deb http://httpredir.debian.org/debian {{ haproxy_debian_distribution }}-backports main"
+haproxy_debian_backports: "deb http://httpredir.debian.org/debian {{ haproxy_debian_distribution }}-backports-2.0 main"
 
 # set this variable to false if you don't want to enable haproxy backports
-haproxy_haproxy_backports_enabled: true
+haproxy_backports_enabled: true
 
-haproxy_haproxy_backports: "deb http://haproxy.debian.net {{ haproxy_debian_distribution }}-backports-{{ haproxy_version }} main"
+haproxy_backports: "deb http://haproxy.debian.net {{ haproxy_debian_distribution }}-backports-{{ haproxy_version }} main"
 
 haproxy_apt_key_url: https://haproxy.debian.net/bernat.debian.org.gpg
 
